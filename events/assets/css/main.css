@@ -1,0 +1,361 @@
+/*
+font-family: 'Cinzel', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Tangerine', cursive;
+font-family: 'Zilla Slab', serif;
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    transition: all ease-in-out .4s;
+}
+body{
+    font-family: 'Tangerine', cursive;
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../images/cony-topaz.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background: hsla(0, 51%, 75%, 0.658);
+    padding: 2px 50px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo img{
+    width: 140px;
+}
+
+.socials{
+    font-size: 20px;
+
+}
+.socials .fa-brands{
+    margin-right: 20px;
+    cursor: pointer;
+    border: 1px solid;
+    padding: 2px;
+    background-color: hsl(0, 51%, 75%);
+}
+.socials .fa-brands:hover{
+    background-color: blue;
+}
+.menu-links ul li{
+    display: inline-block;
+    list-style: none;
+}
+.menu-links ul li a{
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    margin-right: 20px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    position: relative;
+}
+.menu-links ul li a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 2px;
+    background-color: blue;
+    width: 0;
+    bottom: -3px;
+    transition:cubic-bezier(0.165, 0.84, 0.44, 1) 0.4s;
+    
+}
+
+.menu-links ul li a:hover::after{
+    width: 100%;
+    
+}
+.main-text{
+    position: absolute;
+    top: 25%;
+    left: 10%;
+}
+.main-text .name{
+    font-size: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name h3 span{
+    color: blue;
+    padding: 4px;
+    margin-left: 150px;
+
+}
+.about-me{
+    width: 350px;
+    display: flex;
+    padding: 3px;
+    font-size: 40px;
+    margin-left: 60%;
+    
+
+}
+.about-me p{
+    color: hsl(0, 51%, 75%);
+    font-weight: 500;
+    letter-spacing: 3px;
+    
+    
+}
+p .me{
+    color: blue;
+    font-weight: 500;
+
+}
+
+/*-------------about-------------------*/
+.about{
+    margin-top: 10px;
+}
+
+.about h1{
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline blue;
+    margin-bottom: 20px;
+    
+}
+.about-content{
+    padding: 20px 50px;
+    max-width: 96%;
+    display: grid;
+    grid-template-columns:2fr 3fr;
+    grid-gap: 10%;
+    border: 1px solid;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.c, .n, .m{
+    font-size: 30px;
+    color:deeppink;
+    font-weight: 600;
+}
+.about-content img{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.about-content h1{
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+.about-text p{
+    font-size: 35px;
+    background-color: cadetblue;
+    padding: 2px 5px;
+}
+
+/*-----------------------portfolio----------------------*/
+
+.portfolio h1{
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 3px;
+    text-decoration: underline blue;
+    
+}
+
+.images{
+    max-width: 96%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    grid-gap: 10px;
+    padding: 20px 50px;
+    border: 1px solid;
+    justify-content: center;
+    margin: 0 auto;
+   
+}
+
+.images img{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: ease 0.4s;
+}
+.images img:hover{
+    transform: scale(0.8) rotate(-15deg);
+}
+
+/*-------------------------services--------------------*/
+.services h1{
+    text-align: center;
+    font-size: 35px;
+    text-decoration: underline blue;
+    margin: 10px 0;
+    letter-spacing: 3px;
+}
+
+.services-content{
+    max-width: 96%;
+    justify-content: center;
+    margin: 0 auto;
+    border: 1px solid;
+    padding: 20px 50px;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+}
+.services-content img{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s;
+
+}
+.services-content img:hover{
+    transform: scale(1.03) 
+}
+
+.footer{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    background-color: cadetblue;
+    padding: 5px;
+}
+.footer p{
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 4px;
+
+}
+.footer .author{
+    color: blue;
+    font-style: italic;
+}
+.footer img{
+    width: 40px;
+}
+
+/*-------------media screen------------------*/
+
+.fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 700px) {
+    body{
+        overflow-x: hidden;
+    }
+    .logo img{
+        width: 100px;
+    }
+    .socials{
+        margin-left: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .socials .fa-brands{
+        margin-right: 5px;
+
+    }
+
+    nav .menu-links ul{
+        position: fixed;
+        right: -150px;
+        top: 0;
+        background-color: rgb(255, 255, 255);
+        width:150px;
+        height: fit-content;
+        padding-top: 50px;
+        z-index: 2;
+        transition: cubic-bezier(0.755, 0.05, 0.855, 0.06) 0.4s;
+       }
+       .menu-links ul li{
+        display: block;
+        margin: 15px 20px;
+        top: 25px;
+       }
+       .fa-solid{
+        display: block;
+        margin-left: 20px;
+        top: 20px;
+        font-size: 25px;
+        position: absolute;
+    }
+
+    .main-text{
+        top: 40%;
+        
+    }
+    .main-text .name{
+        font-size: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-text .about-me{
+        margin-top: 20%;
+        margin-left: 10%;
+        font-size: 25px;
+    }
+    .about-me p{
+        font-weight: 600;
+        color: rgb(226, 43, 122);
+    }
+    .about-content{
+        display: block;
+    }
+    .about-text p{
+        font-size: 30px;
+    }
+    .footer p{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 850px) {
+    nav .menu-links ul{
+        position: fixed;
+        right: -150px;
+        top: 0;
+        background-color: rgb(255, 255, 255);
+        width:150px;
+        height: fit-content;
+        padding-top: 50px;
+        z-index: 2;
+        transition: cubic-bezier(0.755, 0.05, 0.855, 0.06) 0.4s;
+       }
+       .menu-links ul li{
+        display: block;
+        margin: 15px 20px;
+        top: 25px;
+       }
+       .fa-solid{
+        display: block;
+        margin-left: 20px;
+        top: 20px;
+        font-size: 25px;
+        position: absolute;
+    }
+}
